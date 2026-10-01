@@ -11,10 +11,10 @@
 **Email ID:** akshat.23bce10641@vitbhopal.ac.in
 
 ## Objective
-The objective of this project is to develop a Convolutional Neural Network (CNN) using TensorFlow/Keras to classify pet images into Cats and Dogs to support automated animal identification[cite: 2].
+The objective of this project is to develop a Convolutional Neural Network (CNN) using TensorFlow/Keras to classify pet images into Cats and Dogs to support automated animal identification.
 
 ## Dataset Link
-- [Kaggle: Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)[cite: 2]
+- [Kaggle: Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
 
 ## Libraries Used
 - `pandas`
@@ -27,25 +27,25 @@ The objective of this project is to develop a Convolutional Neural Network (CNN)
 - `kaggle`
 
 ## Methodology
-1. **Data Understanding**: Analyzed binary dataset with 24,998 valid RGB images (12,499 Cats, 12,499 Dogs) and displayed sample images[cite: 2].
+1. **Data Understanding**: Analyzed binary dataset with 24,998 valid RGB images (12,499 Cats, 12,499 Dogs) and displayed sample images.
 2. **Data Preprocessing**:
-   - Filtered unreadable/corrupted files[cite: 2].
-   - Resized images to $128 \times 128$ pixels[cite: 2].
-   - Normalized pixel intensity values to $[0, 1]$ range[cite: 2].
-   - Stratified split into 80% Training (19,998 images) and 20% Testing (5,000 images)[cite: 2].
-   - Created batch image generators using `ImageDataGenerator`[cite: 2].
+   - Filtered unreadable/corrupted files.
+   - Resized images to $128 \times 128$ pixels.
+   - Normalized pixel intensity values to $[0, 1]$ range.
+   - Stratified split into 80% Training (19,998 images) and 20% Testing (5,000 images).
+   - Created batch image generators using `ImageDataGenerator`.
 3. **CNN Architecture**:
-   - **Conv2D Block 1**: 32 filters ($3\times3$, ReLU) + MaxPooling2D ($2\times2$)[cite: 2]
-   - **Conv2D Block 2**: 64 filters ($3\times3$, ReLU) + MaxPooling2D ($2\times2$)[cite: 2]
-   - **Conv2D Block 3**: 128 filters ($3\times3$, ReLU) + MaxPooling2D ($2\times2$)[cite: 2]
+   - **Conv2D Block 1**: 32 filters ($3\times3$, ReLU) + MaxPooling2D ($2\times2$)
+   - **Conv2D Block 2**: 64 filters ($3\times3$, ReLU) + MaxPooling2D ($2\times2$)
+   - **Conv2D Block 3**: 128 filters ($3\times3$, ReLU) + MaxPooling2D ($2\times2$)
    - **Flatten Layer**
-   - **Dense Layer**: 128 neurons (ReLU)[cite: 2]
-   - **Output Layer**: 1 neuron (Sigmoid)[cite: 2]
+   - **Dense Layer**: 128 neurons (ReLU)
+   - **Output Layer**: 1 neuron (Sigmoid)
 4. **Compilation & Training**:
-   - **Optimizer**: Adam[cite: 2]
-   - **Loss Function**: Binary Crossentropy[cite: 2]
-   - Trained for 10 epochs[cite: 2].
-5. **Evaluation**: Evaluated Test Accuracy, Precision, Recall, F1-Score, Confusion Matrix, and plotted Accuracy/Loss graphs per epoch[cite: 2].
+   - **Optimizer**: Adam
+   - **Loss Function**: Binary Crossentropy
+   - Trained for 10 epochs.
+5. **Evaluation**: Evaluated Test Accuracy, Precision, Recall, F1-Score, Confusion Matrix, and plotted Accuracy/Loss graphs per epoch.
 
 ## CNN Architecture Summary
 
@@ -62,11 +62,11 @@ The objective of this project is to develop a Convolutional Neural Network (CNN)
 | `dense_1` | Dense (1, Sigmoid) | (None, 1) | 129 |
 
 ## Results
-- **Test Accuracy:** 85.20%[cite: 2]
-- **Test Loss:** 0.7194[cite: 2]
-- **Precision:** 84.43%[cite: 2]
-- **Recall:** 86.32%[cite: 2]
-- **F1-Score:** 85.36%[cite: 2]
+- **Test Accuracy:** 85.20%
+- **Test Loss:** 0.7194
+- **Precision:** 84.43%
+- **Recall:** 86.32%
+- **F1-Score:** 85.36%
 
 ## Conclusion
-The 3-layer CNN effectively extracts spatial features to classify pet images with 85.20% accuracy[cite: 2]. Adding data augmentation and dropout layers can help prevent training overfitting and improve generalization on unseen image variations[cite: 2].
+The 3-layer CNN effectively extracts spatial features to classify pet images with 85.20% accuracy. Adding data augmentation and dropout layers can help prevent training overfitting and improve generalization on unseen image variations.
